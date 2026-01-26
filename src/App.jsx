@@ -7,18 +7,19 @@ function App() {
       <div className="hearts-container">
         <div className="heart">❤️</div>
         <div className="heart">💖</div>
-        <div className="heart">✨</div>
+        <div className="heart">💗</div>
         <div className="heart">❤️</div>
         <div className="heart">💕</div>
       </div>
       
       <div className="content">
-        <h1>Our Love Story</h1>
-        <p>A journey through grace and memories</p>
+        <h1 className="title">Valentine's Day</h1>
+        <p className="verse">"We love because He first loved us."</p>
+        <p className="reference">1 John 4:19</p>
       </div>
 
       <div className="scroll-indicator">
-        <span>Scroll Down</span>
+        <span>Scroll for our story</span>
         <div className="arrow"></div>
       </div>
     </div>
