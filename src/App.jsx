@@ -2,6 +2,7 @@ import FinalAskSection from './componets/FinalAskSection';
 import HeroSection from './componets/HeroSection';
 import MemoryLane from './componets/MemoryLane';
 import ReasonsSection from './componets/ReasonsSection';
+import HighlightReel from './componets/HighlightReel';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <HeroSection />
       <ReasonsSection />
       <MemoryLane/>
+      <HighlightReel/>
       <FinalAskSection/>
     </main>
   );
