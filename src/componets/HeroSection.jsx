@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
+  // Simple logic to make the seconds count up vividly
+  const [seconds, setSeconds] = useState(999999900);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds(prev => prev + 1);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="hero-section">
       <style>{`
@@ -18,8 +29,10 @@ const HeroSection = () => {
           background-position: center;
           color: #fff;
           text-align: center;
+          font-family: serif;
         }
 
+        /* Floating Hearts Animation */
         .hearts-container {
           position: absolute;
           top: 0;
@@ -48,35 +61,83 @@ const HeroSection = () => {
           100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
         }
 
+        /* Main Content */
+        .content {
+          z-index: 10;
+          padding: 0 1rem;
+        }
+
         .title {
-          font-size: 5rem;
+          font-size: 4rem;
           font-weight: bold;
           color: #ff4d6d;
           text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
           margin-bottom: 20px;
-          font-family: 'Times New Roman', serif;
+          line-height: 1.1;
+        }
+        
+        @media (min-width: 768px) {
+            .title { font-size: 6rem; }
         }
 
         .verse {
-          font-size: 2rem;
+          font-size: 1.5rem;
           font-style: italic;
-          max-width: 80%;
+          max-width: 800px;
           margin: 0 auto;
           color: #ffb3c1;
         }
 
         .reference {
-          font-size: 1.2rem;
+          font-size: 1rem;
           margin-top: 10px;
           letter-spacing: 2px;
           color: #fff;
+          font-family: sans-serif;
+          text-transform: uppercase;
         }
 
+        /* Corner Timer Badge */
+        .timer-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.8rem 1.2rem;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            z-index: 20;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .timer-label {
+            font-family: sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 0.2rem;
+        }
+
+        .timer-value {
+            font-family: monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #f43f5e;
+            text-shadow: 0 0 10px rgba(244, 63, 94, 0.5);
+        }
+
+        /* Scroll Indicator */
         .scroll-indicator {
           position: absolute;
           bottom: 40px;
           color: #ffb3c1;
           font-weight: bold;
+          font-family: sans-serif;
           animation: bounce 2s infinite;
         }
 
@@ -96,6 +157,7 @@ const HeroSection = () => {
         }
       `}</style>
 
+      {/* Floating Hearts */}
       <div className="hearts-container">
         <div className="heart">❤️</div>
         <div className="heart">💖</div>
@@ -103,11 +165,44 @@ const HeroSection = () => {
         <div className="heart">❤️</div>
         <div className="heart">💕</div>
       </div>
+
+      {/* Corner Timer */}
+      <motion.div 
+        className="timer-badge"
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 1, type: 'spring' }}
+      >
+        <span className="timer-label">Time Together</span>
+        <span className="timer-value">{seconds.toLocaleString()}s</span>
+      </motion.div>
       
+      {/* Main Content */}
       <div className="content">
-        <h1 className="title">Valentine's Day</h1>
-        <p className="verse">"We love because He first loved us."</p>
-        <p className="reference">1 John 4:19</p>
+        <motion.h1 
+          className="title"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          Valentine's Day
+        </motion.h1>
+        <motion.p 
+          className="verse"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+        >
+          "We love because He first loved us."
+        </motion.p>
+        <motion.p 
+          className="reference"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+        >
+          1 John 4:19
+        </motion.p>
       </div>
 
       <div className="scroll-indicator">
