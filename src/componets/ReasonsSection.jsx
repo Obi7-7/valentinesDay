@@ -3,61 +3,61 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const horizontalItems = [
   {
-    image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1000&auto=format&fit=crop",
+    image: "https://i.postimg.cc/kMsK2bfW/d59ab4c3-91ed-4cf9-a551-03c7e349424b.jpg",
     title: "Kindest Heart",
     description: "You have the kindest heart I've ever known.",
     id: "01",
   },
   {
-    image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1000&auto=format&fit=crop",
+    image: "https://i.postimg.cc/d3dk0bx4/5D9C3EFB-6945-4D28-ACFF-28110F2052D7-1-102-o.jpg",
     title: "Your Laugh",
     description: "Your laugh is my absolute favorite sound in the world.",
     id: "02",
   },
   {
-    image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1000&auto=format&fit=crop",
+    image: "https://i.postimg.cc/C5j50jZT/C67EC12D-A3A4-46E1-A370-08741F3D2BDB.jpg",
     title: "Better Person",
     description: "You push me to be a better person every single day.",
     id: "03",
   },
   {
-    image: "https://images.unsplash.com/photo-1494774157365-9e04c6720e47?q=80&w=1000&auto=format&fit=crop",
+    image: "https://i.postimg.cc/xTnTHNJL/E743F3DD-B612-4385-B1DE-84CCB914E7A3.jpg",
     title: "Adventurous Spirit",
     description: "You make even the boring days feel like an adventure.",
     id: "04",
   },
   {
-    image: "https://images.unsplash.com/photo-1516726817505-f5ed825624d8?q=80&w=1000&auto=format&fit=crop",
+    image: "https://i.postimg.cc/FRDzHjNN/IMG-3436.png",
     title: "Safe Haven",
     description: "You make me feel safe, loved, and understood.",
     id: "05",
   },
   {
-    image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1000&auto=format&fit=crop",
+    image: "https://i.postimg.cc/0yvW9xBZ/39F55FDA-B92E-463D-ADA6-AA33367A7A20-1-105-c.jpg",
     title: "Your Wisdom",
     description: "I love how you see the world and the advice you give.",
     id: "06",
   },
   {
-    image: "https://images.unsplash.com/photo-1522673607200-1645062cd958?q=80&w=1000&auto=format&fit=crop",
+    image: "https://i.postimg.cc/YS9xSSfd/D841A02E-4DFD-4648-81DA-F0324D13C100.jpg",
     title: "Your Faith",
     description: "Seeing God's light shine through you is a blessing.",
     id: "07",
   },
   {
-    image: "https://images.unsplash.com/photo-1520024144160-3929e3e239f8?q=80&w=1000&auto=format&fit=crop",
+    image: "https://i.postimg.cc/qv0TSPXB/27EE5B9F-1F2A-4712-B3FB-519E0D43DF68-1-105-c.jpg",
     title: "Your Strength",
     description: "You are stronger than you know, and I admire that.",
     id: "08",
   },
   {
-    image: "https://images.unsplash.com/photo-1517021897933-0e03195bb869?q=80&w=1000&auto=format&fit=crop",
+    image: "https://i.postimg.cc/cJr5bhjR/C7C4ED96-47AD-4403-AC75-AA647C2E4B1B.jpg",
     title: "Our Future",
     description: "I simply cannot imagine my life without you in it.",
     id: "09",
   },
   {
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop",
+    image: "https://i.postimg.cc/fbtBKLt8/047107F9-DAD8-4422-A89E-25A092F36681-1-105-c.jpg",
     title: "Everything",
     description: "I love everything about you, inside and out.",
     id: "10",
@@ -66,7 +66,7 @@ const horizontalItems = [
     id: "end",
     title: "And yet...",
     description: "My love for you is not bound to these reasons.",
-    image: null 
+    image: null
   }
 ];
 
@@ -86,7 +86,7 @@ const ReasonsSection = () => {
         .reasons-section {
           height: 600vh;
           position: relative;
-          background: #0f172a;
+          background: #e0e4ec;
           overflow: visible;
         }
 
@@ -166,7 +166,7 @@ const ReasonsSection = () => {
           width: 100%;
           border-radius: 1rem;
           overflow: hidden;
-          background: #1e293b;
+          background: #ffffffed;
           transition: transform 0.3s ease;
         }
 
@@ -281,7 +281,7 @@ const ReasonsSection = () => {
         <motion.div style={{ x }} className="cards-container">
           {horizontalItems.map((item, index) => {
             const isLast = item.id === "end";
-            
+
             return (
               <motion.div
                 key={index}
@@ -290,10 +290,10 @@ const ReasonsSection = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="card group"
               >
-                <div 
-                  className="card-image-wrapper" 
-                  style={isLast ? { 
-                    background: 'rgba(255, 255, 255, 0.1)', 
+                <div
+                  className="card-image-wrapper"
+                  style={isLast ? {
+                    background: 'rgba(255, 255, 255, 0.1)',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                     backdropFilter: 'blur(10px)'
                   } : {}}
@@ -308,14 +308,14 @@ const ReasonsSection = () => {
                       <div className="card-overlay" />
                     </>
                   )}
-                  
+
                   {isLast ? (
-                     // FINAL CARD: Centered Container with White Text
-                     <div className="final-card-container">
-                        <h3 className="final-text">
-                           {item.description}
-                        </h3>
-                     </div>
+                    // FINAL CARD: Centered Container with White Text
+                    <div className="final-card-container">
+                      <h3 className="final-text">
+                        {item.description}
+                      </h3>
+                    </div>
                   ) : (
                     // NORMAL CARD: TEXT AT BOTTOM
                     <motion.div

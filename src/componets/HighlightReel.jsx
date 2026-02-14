@@ -11,7 +11,7 @@ const videos = [
   },
   {
     id: 2,
-    src: "https://assets.mixkit.co/videos/preview/mixkit-couple-watching-fireworks-concept-4395-large.mp4",
+    src: "",
     title: "Pure Magic",
     caption: "Every second with you feels like a celebration. You light up my world."
   },
@@ -59,9 +59,9 @@ const PhoneVideo = ({ src, title, caption, index }) => {
   return (
     <div ref={containerRef} className="video-section">
       <div className={`content-container ${isEven ? "row" : "row-reverse"}`}>
-        
+
         {/* Text Side */}
-        <motion.div 
+        <motion.div
           className="text-wrapper"
           initial={{ opacity: 0, x: isEven ? -50 : 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -73,7 +73,7 @@ const PhoneVideo = ({ src, title, caption, index }) => {
         </motion.div>
 
         {/* Phone Video Side */}
-        <motion.div 
+        <motion.div
           className="phone-wrapper"
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
           animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
@@ -89,7 +89,7 @@ const PhoneVideo = ({ src, title, caption, index }) => {
               muted={isMuted} // Start muted to ensure autoplay works
               playsInline // Important for mobile
             />
-            
+
             {/* Sound Toggle Overlay */}
             <button onClick={toggleMute} className="sound-toggle">
               {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
@@ -98,7 +98,7 @@ const PhoneVideo = ({ src, title, caption, index }) => {
             {/* Phone Notch/Details */}
             <div className="phone-notch"></div>
           </div>
-          
+
           {/* Aesthetic Shadow */}
           <div className="phone-shadow"></div>
         </motion.div>
@@ -281,7 +281,7 @@ const HighlightReel = () => {
         }
       `}</style>
 
-      <motion.div 
+      <motion.div
         className="header"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

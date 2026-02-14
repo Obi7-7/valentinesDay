@@ -24,7 +24,7 @@ const HeroSection = () => {
           justify-content: center;
           position: relative;
           overflow: hidden;
-          background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=2070&auto=format&fit=crop');
+          background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.postimg.cc/mgHdhpsV/028F9E3A-C205-4ADA-8D88-A7EE6740F632.jpg');
           background-size: cover;
           background-position: center;
           color: #fff;
@@ -164,38 +164,40 @@ const HeroSection = () => {
         <div className="heart">💗</div>
         <div className="heart">❤️</div>
         <div className="heart">💕</div>
+        <div className="face"><img src="https://i.postimg.cc/Bvzw9zPw/IMG-3433.png" alt="Face" />/Users/obihlabangwane/Desktop/CHI/IMG_3433.PNG</div>
       </div>
 
       {/* Corner Timer */}
-      <motion.div 
+      <motion.div
         className="timer-badge"
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 1, type: 'spring' }}
       >
-        <span className="timer-label">Time Together</span>
-        <span className="timer-value">{seconds.toLocaleString()}s</span>
+        <span className="timer-label">We've been together for...</span>
+        <span className="timer-value">2 years;)</span>
       </motion.div>
-      
+
       {/* Main Content */}
       <div className="content">
-        <motion.h1 
+        <motion.h1
           className="title"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          Valentine's Day
+          Yellurrrrr!!!!
+
         </motion.h1>
-        <motion.p 
+        <motion.p
           className="verse"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-          "We love because He first loved us."
+          "We love each other because he loved us first."
         </motion.p>
-        <motion.p 
+        <motion.p
           className="reference"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

@@ -3,14 +3,14 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Heart, X } from "lucide-react";
 
 // Unsplash Images
-const valentineBg = "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=2070&auto=format&fit=crop";
-const pointingImage = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop"; 
+const valentineBg = "https://i.postimg.cc/5tP6SZk6/IMG-3440.jpg";
+const pointingImage = "https://i.postimg.cc/JhZVxJhd/IMG-4067-2.png=fit=crop&w=800&q=80";
 
 const FinalAskSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  
-  const [stage, setStage] = useState("initial"); 
+
+  const [stage, setStage] = useState("initial");
   const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0 });
   const [noClickCount, setNoClickCount] = useState(0);
 
@@ -52,7 +52,7 @@ const FinalAskSection = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="main-heading"
             >
-              Will You Be My
+              niagra be my
               <br />
               <span className="text-gradient">Valentine?</span>
             </motion.h2>
@@ -63,7 +63,7 @@ const FinalAskSection = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="sub-text"
             >
-              Because every love story is beautiful, but ours is my favorite.
+              bro..every love story is beautiful, but ours is my favorite.
             </motion.p>
 
             <motion.div
@@ -90,7 +90,7 @@ const FinalAskSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="btn btn-no"
               >
-                <span className="btn-content">No...</span>
+                <span className="btn-content">Nah...</span>
               </motion.button>
             </motion.div>
           </motion.div>
@@ -112,7 +112,7 @@ const FinalAskSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="main-heading-small"
             >
-              Wait... <span className="text-gradient">Are you sure?</span>
+              holdzon... <span className="text-gradient">you gotta be serious?</span>
             </motion.h2>
 
             <motion.p
@@ -121,7 +121,7 @@ const FinalAskSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="sub-text"
             >
-              Think about it one more time... 💭
+              think about it one more time... 💭
             </motion.p>
 
             <motion.div
@@ -152,7 +152,7 @@ const FinalAskSection = () => {
               >
                 <span className="btn-content">
                   <X className="btn-icon-small" />
-                  Still No
+                  Bounce No!
                 </span>
               </motion.button>
             </motion.div>
@@ -188,36 +188,36 @@ const FinalAskSection = () => {
             </motion.div>
 
             <div style={{ marginTop: '0.5rem' }}>
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                  className="main-heading-small"
-                  style={{ marginBottom: '0.5rem' }}
-                >
-                  I don't even know why
-                  <br />
-                  I asked...
-                </motion.h2>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="main-heading-small"
+                style={{ marginBottom: '0.5rem' }}
+              >
+                it's non negotiable...😡
+                <br />
+                sillyyyyyy...
+              </motion.h2>
 
-                <motion.p
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.6, duration: 0.6 }}
-                  className="main-text-bold"
-                >
-                  You're MINE! 💕
-                </motion.p>
+              <motion.p
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+                className="main-text-bold"
+              >
+                you and i forever and always. 💕
+              </motion.p>
             </div>
-            
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.6 }}
             >
-              <h3 className="success-heading">You Made Me So Happy!</h3>
+              <h3 className="success-heading">you fill me with joy bro!</h3>
               <p className="sub-text">
-                I can't wait to spend Valentine's Day with you! 💕
+                When i catch you it's on sight!!🫵
               </p>
             </motion.div>
 

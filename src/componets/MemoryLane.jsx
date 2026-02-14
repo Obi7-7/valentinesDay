@@ -4,33 +4,34 @@ import { motion } from "framer-motion";
 // Unsplash placeholders for the memories
 const timelineData = [
   {
-    image: "https://images.unsplash.com/photo-1522673607200-1645062cd958?q=80&w=1000&auto=format&fit=crop",
+    image: "https://i.postimg.cc/4xkW5tkj/IMG-3438.jpg",
     title: "Where It All Began",
-    description: "The moment our paths crossed, everything changed. A chance encounter that would lead to something beautiful. In that instant, time stood still.",
-    date: "Chapter One",
+    description: "auhh  I still remember the first time we met. It was like the universe conspired to bring us together. That moment changed everything.",
+
+    date: "23 September 2023",
   },
   {
-    image: "https://images.unsplash.com/photo-1517021897933-0e03195bb869?q=80&w=1000&auto=format&fit=crop",
+    image: "https://i.postimg.cc/QtPfzNdJ/Chat-GPT-Image-Feb-14-2026-at-04-39-42-PM.png",
     title: "Our First Adventure",
-    description: "Late nights, shared dreams, and endless conversations. Every moment with you felt like magic. We discovered worlds together.",
+    description: "Late nights, shared dreams, and endless conversations,every moment with you feels like magic bro. I cherish every memory we've created together.",
     date: "Chapter Two",
   },
   {
-    image: "https://images.unsplash.com/photo-1520024144160-3929e3e239f8?q=80&w=1000&auto=format&fit=crop",
+    image: "https://i.postimg.cc/YqLv7nDr/Chat-GPT-Image-Feb-14-2026-at-04-33-02-PM.png",
     title: "Dancing Through Life",
-    description: "We learned to dance in the rain together, finding joy in the simplest of moments. Your laughter became my favorite melody.",
+    description: "We learned to dance in the rain together,in the distance, finding joy in the simplest of moments,your laughter became my favorite melody.",
     date: "Chapter Three",
   },
   {
-    image: "https://images.unsplash.com/photo-1494774157365-9e04c6720e47?q=80&w=1000&auto=format&fit=crop",
-    title: "Reaching New Heights",
-    description: "Together, we've climbed mountains and conquered fears. With you, anything feels possible. Every peak is better with you by my side.",
+    image: "https://i.postimg.cc/Vk92bwZp/0FC47B1D-EAAF-417D-ADB0-89F64C93B823-1-105-c.jpg",
+    title: "Weirdos in Love",
+    description: "together,we've climbed mountains and conquered fears. With you, anything feels possible i love seeing what feels impossible made possible with you, every peak is better with you by my side ;).",
     date: "Chapter Four",
   },
   {
-    image: "https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?q=80&w=1000&auto=format&fit=crop",
+    image: "https://i.postimg.cc/4xFVP706/91918026-5018-469A-86A9-B124557B3A2A.jpg",
     title: "Forever & Always",
-    description: "As time moves on, my love for you only grows stronger. This is just the beginning of our forever. The best is yet to come.",
+    description: "as time moves on, my love for you only grows stronger,this is just the beginning of our foreverrrrr, i always choose you chiiii!!!!🌍❤️",
     date: "Chapter Five",
   },
 ];
